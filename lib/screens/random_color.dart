@@ -25,6 +25,8 @@ class _RandomColorState extends State<RandomColor> with SingleTickerProviderStat
 
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
+    final width = MediaQuery.of(context).size.width;
     return   Scaffold(
       appBar: AppBar(
         title: const Text('Random Color'),
@@ -47,7 +49,10 @@ class _RandomColorState extends State<RandomColor> with SingleTickerProviderStat
           });
         },
         child: Container(
+          height: height,
+          width: width,
          color: _color,
+
         ),
       ),
     );

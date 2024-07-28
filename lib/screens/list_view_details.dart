@@ -9,8 +9,7 @@ class ListViewDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-       leading:
-          IconButton(onPressed: (){
+       leading: IconButton(onPressed: (){
             Navigator.pop(context);
           }, icon: const Icon(Icons.arrow_back)),
 
@@ -42,6 +41,7 @@ class ListViewDetails extends StatelessWidget {
               'Description: ${userinfo.body}',
               style: const TextStyle(fontSize: 18),
             ),
+
           ],
         ),
       ),

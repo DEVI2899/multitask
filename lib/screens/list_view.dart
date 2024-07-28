@@ -24,7 +24,8 @@ class _ListDataState extends State<ListData> {
         future: userprovider.fetchItems(),
         builder: (context, snapshot) {
            if (snapshot.hasError) {
-            return Center(child: Text('Error: ${snapshot.error}'));
+            return Center(child:
+            Text('Error: ${snapshot.error}'));
          } else {
             return ListView.builder(
                 itemCount: userprovider.details.length,

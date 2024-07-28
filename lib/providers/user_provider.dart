@@ -1,9 +1,5 @@
-
-
-
 import 'package:animation/model/user_details.dart';
 import 'package:animation/service/api_service.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 
 class UserProvider extends ChangeNotifier{

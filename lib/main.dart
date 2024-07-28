@@ -1,12 +1,14 @@
 
 import 'package:animation/providers/user_provider.dart';
+import 'package:animation/screens/camera_screen.dart';
+import 'package:animation/screens/home_screen.dart';
+import 'package:animation/screens/list_view.dart';
+import 'package:animation/screens/random_color.dart';
 import 'package:firebase_core/firebase_core.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
-
-import 'imeage_search/image_search.dart';
+import 'firebase/autth/register_screen.dart';
 import 'imeage_search/sample.dart';
 
  Future<void> main()async {
@@ -44,11 +46,15 @@ class MyApp extends StatelessWidget {
             colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
             useMaterial3: true,
           ),
-          //home: const RandomColor(),
-         //  home:const CameraScreen() ,
-          //   home: const ListData(),
-         home: ImageSearchScreen(),
-        //  home: const RegisterPage(),
+          routes: {
+            '/' : (context) =>const HomeScreen(),
+            '/Random' : (context) => const RandomColor(),
+            '/ListData' :(context) => const ListData(),
+            '/camera' :(context) => const CameraScreen(),
+            '/ImageSearch': (context) => ImageSearchScreen(),
+            '/auth' :(context) =>const RegisterPage()
+          },
+
           debugShowCheckedModeBanner: false,
         ),
 

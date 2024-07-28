@@ -56,7 +56,6 @@ class _LoginState extends State<Login> {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: TextFormField(
-
                   decoration:  InputDecoration(
                       fillColor: Colors.black,
                       focusedBorder: OutlineInputBorder(

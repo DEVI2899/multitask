@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'login.dart';
 
@@ -97,10 +98,13 @@ class _RegisterPageState extends State<RegisterPage> {
         email: emailController.text,
         password: passwordController.text,
       );
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('successfuly register')));
+      ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('successfully register')));
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
-        print('The password provided is too weak.');
+        if (kDebugMode) {
+          print('The password provided is too weak.');
+        }
       } else if (e.code == 'email-already-in-use') {
         print('The account already exists for that email.');
       }
