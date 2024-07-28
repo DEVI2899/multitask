@@ -54,11 +54,8 @@ class MyApp extends StatelessWidget {
             '/ImageSearch': (context) => ImageSearchScreen(),
             '/auth' :(context) =>const RegisterPage()
           },
-
           debugShowCheckedModeBanner: false,
         ),
-
-
     );
   }
 }
